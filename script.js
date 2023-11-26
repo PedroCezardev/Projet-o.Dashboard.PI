@@ -1,172 +1,138 @@
-var LABELS_CSV = [];
-var DATA_CSV = {};
+const sideMenu = document.querySelector('aside');
+const menuBtn = document.getElementById('menu-btn');
+const closeBtn = document.getElementById('close-btn');
 
-var chartBar = null;
-// Função para criar um gráfico de barras
-// Gráfico de Barras
-function criarGraficoDeBarras(data) {
-  const ctx = document.getElementById('barChart').getContext('2d');
-  if(chartBar){
-    chartBar.clear();
-    chartBar.destroy();
-  }
-  chartBar = new Chart(ctx, {
-    type: 'bar',
-    data: {
-      labels: data.labels,
-      datasets: [{
-        label: 'Valores',
-        data: data.values,
-        backgroundColor: 'rgba(75, 192, 192, 0.2)',
-        borderColor: 'rgba(75, 192, 192, 1)',
-        borderWidth: 1
-      }]
-    },
-    options: {
-      responsive: true,
-      scales: {
-        y: {
-          beginAtZero: true // Opção para começar o Eixo Y do Zero
-        }
-      }
-    }
-  });
-}
+const darkMode = document.querySelector('.dark-mode');
 
-// Gráfico de Pizza
-var chartPizza = null;
-// Função para criar um gráfico de pizza
-function criarGraficoDePizza(data) {
-  const ctx = document.getElementById('pieChart').getContext('2d');
-  if(chartPizza){
-    chartPizza.clear();
-    chartPizza.destroy();
-  }
-  chartPizza = new Chart(ctx, {
-    type: 'pie',
-    data: {
-      labels: data.labels,
-      datasets: [{
-        data: data.values,
-        backgroundColor: ["#5056BF", "#65A6FA", "#6D74F2", "#9B57CC", "#00CADC"],
-        borderColor: "#FFFFFF",
-        borderWidth: 2,
-      }]
-    }
-  });
-}
-
-// Gráfico de Linhas
-var chartLines = null;
-// Função para criar um gráfico de linhas
-function criarGraficoDeLinhas(data) {
-  const ctx = document.getElementById('lineChart').getContext('2d');
-  if(chartLines){
-    chartLines.clear();
-    chartLines.destroy();
-  }
-  chartLines = new Chart(ctx, {
-    type: 'line',
-    data: {
-      labels: data.labels,
-      datasets: [{
-        label: 'Valores',
-        data: data.values,
-        fill: true, // Preencher área sob curvas
-        tension: 0.4, // Suavizar curvas
-        backgroundColor: 'rgba(75, 192, 192, 0.2)',
-        borderColor: 'rgba(75, 192, 192, 1)',
-        borderWidth: 1
-      }]
-    }
-  });
-}
-
-// Função para ler e adicionar o selecionar series 
-const addSelectOptions = (options) => {
-  options.forEach(option => {
-    const htmlOption = document.createElement('option');
-    htmlOption.value = option;
-    htmlOption.innerHTML = option;
-    document.getElementById('series').appendChild(htmlOption);
-  });
-}
-
-// Função para analisar o arquivo CSV
-function analisarCSV(file) {
-  Papa.parse(file, {
-    header: true,
-    dynamicTyping: true,
-    complete: function (results) {
-      const raw_data = results.data;
-      data_csv = raw_data;
-
-      LABELS_CSV = Object.keys(raw_data[0]).filter((key) => key);
-      addSelectOptions(LABELS_CSV);
-
-      DATA_CSV[LABELS_CSV[0]] = [];
-      DATA_CSV[LABELS_CSV[1]] = [];
-      DATA_CSV[LABELS_CSV[2]] = [];
-      const labels = [];
-      for (const index in data_csv) {
-        const data = data_csv[index];
-        DATA_CSV[LABELS_CSV[0]].push(data[LABELS_CSV[0]]);
-        DATA_CSV[LABELS_CSV[1]].push(data[LABELS_CSV[1]]);
-        DATA_CSV[LABELS_CSV[2]].push(data[LABELS_CSV[2]]);
-        labels.push(data['']);
-      }
-      DATA_CSV['labels'] = labels;
-      console.log(DATA_CSV);
-    }
-  });
-}
-
-// Evento de seleção de arquivo CSV
-document.getElementById('csvFile').addEventListener('change', function (e) {
-  const file = e.target.files[0];
-  if (file) analisarCSV(file);
+menuBtn.addEventListener('click', () => {
+    sideMenu.style.display = 'block';
 });
 
-
-// Função para exportar gráfico como imagem
-function exportarGrafico() {
-  const chartContainer = document.getElementById('barChart', 'pieChart', 'lineChart');
-  var image = chartBar.toBase64Image();
-  const btnDownload = document.getElementById('download');
-  btnDownload.href = chartBar.toBase64Image();
-
-  btnDownload.download = 'my_file_name.png';
-
-  // Trigger the download
-  btnDownload.click();
-}
-
-// Evento para atualizar gráfico quando a série é selecionada
-document.getElementById('series').addEventListener('change', function (event) {
-  const series = document.getElementById('series');
-  const selectedValue = series.options[series.selectedIndex].text;
-  // Implemente a lógica para atualizar os gráficos com a série selecionada
-  // Você pode filtrar os dados e atualizar os gráficos de acordo com a série selecionada.
-  criarGraficoDeBarras({
-    labels: DATA_CSV.labels,
-    values: DATA_CSV[selectedValue]
-  });
-  criarGraficoDePizza({
-    labels: DATA_CSV.labels,
-    values: DATA_CSV[selectedValue]
-  });
-  criarGraficoDeLinhas({
-    labels: DATA_CSV.labels,
-    values: DATA_CSV[selectedValue]
-  });
+closeBtn.addEventListener('click', () => {
+    sideMenu.style.display = 'none';
 });
 
-// Função para empilhar séries em gráficos de barras
-function empilharSeries() {
-  // Implemente a lógica para empilhar séries nos gráficos de barras
-}
-
-// Evento para ativar ou desativar a opção de empilhar séries
-document.getElementById('empilharSeries').addEventListener('change', function () {
-  empilharSeries();
+darkMode.addEventListener('click', () => {
+    document.body.classList.toggle('dark-mode-variables');
+    darkMode.querySelector('span:nth-child(1)').classList.toggle('active');
+    darkMode.querySelector('span:nth-child(2)').classList.toggle('active');
 })
+
+
+// Gráfico 4: Gráfico de Rosca
+var ctx4 = document.getElementById("chart1").getContext("2d");
+var chart4 = new Chart(ctx4, {
+    type: "doughnut",
+    data: {
+        labels: ["SEG", "TER", "QUAR", "QUIN", "SEX"],
+        datasets: [
+            {
+                label: "Gráfico de Rosca",
+                data: [20, 35, 50, 28, 53],
+                backgroundColor: ["#5056BF", "#65A6FA", "#6D74F2", "#9B57CC", "#00CADC"],
+                borderColor: "#FFFFFF",
+                borderWidth: 2,
+            },
+        ],
+    },
+});
+
+// Gráfico 4: Gráfico de Rosca
+var ctx4 = document.getElementById("chart2").getContext("2d");
+var chart4 = new Chart(ctx4, {
+    type: "doughnut",
+    data: {
+        labels: ["SEG", "TER", "QUAR", "QUIN", "SEX"],
+        datasets: [
+            {
+                label: "Gráfico de Rosca",
+                data: [20, 35, 50, 28, 53],
+                backgroundColor: ["#5056BF", "#65A6FA", "#6D74F2", "#9B57CC", "#00CADC"],
+                borderColor: "#FFFFFF",
+                borderWidth: 2,
+            },
+        ],
+    },
+});
+
+// Gráfico 4: Gráfico de Rosca
+var ctx4 = document.getElementById("chart3").getContext("2d");
+var chart4 = new Chart(ctx4, {
+    type: "doughnut",
+    data: {
+        labels: ["SEG", "TER", "QUAR", "QUIN", "SEX"],
+        datasets: [
+            {
+                label: "Gráfico de Rosca",
+                data: [20, 35, 50, 28, 53],
+                backgroundColor: ["#5056BF", "#65A6FA", "#6D74F2", "#9B57CC", "#00CADC"],
+                borderColor: "#FFFFFF",
+                borderWidth: 2,
+            },
+        ],
+    },
+});
+
+// Gráfico 1: Gráfico de Barras
+var ctx1 = document.getElementById("chart4").getContext("2d");
+var chart1 = new Chart(ctx1, {
+    type: "bar",
+    data: {
+        labels: ["DOM", "SEG", "TER", "QUAR", "QUIN", "SEX", "SÁB"],
+        datasets: [
+            {
+                label: "Gráfico de Barras",
+                data: [250, 150, 300, 190, 175, 310, 350],
+                backgroundColor: ["#6C57F1", "#6C57F1", "#6C57F1", "#6C57F1", "#6C57F1"],
+            },
+        ],
+    },
+});
+
+// Gráfico 2: Gráfico de Pizza
+var ctx2 = document.getElementById("chart5").getContext("2d");
+var chart2 = new Chart(ctx2, {
+    type: "pie",
+    data: {
+        labels: ["JAN", "FEV", "MAR"],
+        datasets: [
+            {
+                data: [25, 12, 15,],
+                backgroundColor: ["#5056BF", "#76A7E6", "#9B57CC"],
+            },
+        ],
+    },
+});
+
+// Gráfico 3: Gráfico de Linha
+var ctx3 = document.getElementById("chart6").getContext("2d");
+var chart3 = new Chart(ctx3, {
+    type: "line",
+    data: {
+        labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "jul"],
+        datasets: [
+            {
+                label: "Gráfico de Linha",
+                data: [100, 150, 250, 200, 235, 300, 400],
+                borderColor: "#F3926F",
+                fill: false,
+            },
+        ],
+    },
+});
+
+var ctx5 = document.getElementById("chart7").getContext("2d");
+var chart5 = new Chart(ctx5, {
+    type: 'bar',
+    label: 'Bar Dataset',
+    data: {
+        labels: ["Jan", "Fev", "Mar", "Abr", "Mai", "Jun", "Jul", "Ago", "Set", "Out", "Nov", "Dez"],
+        datasets: [{
+            label: "Fluxo de 2019",
+            data: [10, 15, 8, 5, 6, 9, 10, 7, 8, 11, 4, 5],
+            borderWidth: 3,
+            borderColor: '#6D74F2'
+        }]
+
+    }
+});

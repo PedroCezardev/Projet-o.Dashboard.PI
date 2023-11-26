@@ -1,30 +1,72 @@
-/* css do body */
-body {
-    font-family: Arial, sans-serif;
-    text-align: left;
-    align-items: center;
-    margin: 0px;
-    overflow-x: hidden;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+:root  {
+    --color-primary: #6C9BCF;
+    --color-danger: #FF0060;
+    --color-success: #1B9C85;
+    --color-warning: #F7D060;
+    --color-white: #fff;
+    --color-info-dark: #7d8da1;
+    --color-dark: #363949;
+    --color-light: rgba(132, 139, 200, 0.18);
+    --color-dark-variant: #677483;
+    --color-background: #f6f6f9;
+    --color-fundo: #E0E2FF;
+    --color-navbar: #989df6;
+
+    --card-border-radius: 2rem;
+    --border-radius-1: 0.4rem;
+    --border-radius-2: 1.2rem;
+
+    --card-padding: 1.8rem;
+    --padding-1: 1.2rem;
+
+    --box-shadow: 0 2rem 3rem var(--color-light);
 }
 
-/* css imagem de fundo */
-.background-image {
-    position: fixed;
-    top: 0;
-    left: 0;
+.dark-mode-variables {
+    --color-fundo: #181a1e;
+    --color-white: #2c2e31;
+    --color-dark: #edeffd;
+    --color-dark-variant: #a3bdcc;
+    --color-navbar: #222629;
+    --color-light: rgba(0, 0, 0, 0.4);
+    --box-shadow: 0 2rem 3rem var(--color-light);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    appearance: 0;
+    border: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 12px;
+    width: 100%;
+}
+
+body{
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Ajusta a imagem para cobrir toda a área disponível */
-    z-index: -1; /* Coloca a imagem atrás de outros elementos */
+    font-family: 'Poppings', sans-serif;
+    font-size: 1rem;
+    overflow-x: hidden;
+    color: var(--color-dark);
+    background-color: var(--color-fundo);
+    transition: all 0.3s ease;
 }
 
 /* inicio navbar */
 .navbar {   
-    background-color: #333;
+    background-color: var(--color-navbar);
     overflow: hidden;
     display: flex;
-    justify-content: center;
-    margin-bottom: 0px;
+    height: 70px;
+    transition: all 0.3s ease;
 }
 
 .navbar a {
@@ -32,7 +74,7 @@ body {
     display: block;
     color: #f2f2f2;
     text-align: center;
-    padding: 18px 22px;
+    padding: 1008px 20002px;
     text-decoration: none;
 }
 
@@ -40,16 +82,243 @@ body {
     background-color: #ddd;
     color: black;
 }
+
+.logo1{
+    font-weight: 800;
+    font-size: 1.8rem;
+    display: flex;
+    padding: 13px;
+    margin-left: 900px;
+}
+
+.logo{
+    font-weight: 800;
+    font-size: 1.8rem;
+    display: flex;
+    padding: 10px;
+    border-radius: 10rem;
+}
+
+.dark-mode,
+.profile {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.dark-mode {
+    margin-right: 5px; /* margin do darkmode */
+}
+
+.profile {
+    margin-right: 20px; /* margin do perfil */
+}
+
+/* Alinhar o .profile corretamente */
+.profile .info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+/* estiliza o botão darkmode e o perfil */
+.right-section{
+    margin-top: 1.4rem;
+}
+
+.right-section .nav{
+    display: flex;
+    justify-content: end;
+    gap: 2rem;
+}
+
+.right-section .nav button{
+    display: none;
+}
+
+.right-section .dark-mode{
+    background-color: var(--color-white);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 2.2rem;
+    width: 5.5rem;
+    cursor: pointer;
+    border-radius: var(--border-radius-1);
+    margin-left:700px;
+}
+
+.right-section .dark-mode span{
+    font-size: 1.2rem;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.right-section .dark-mode span.active{
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    border-radius: var(--border-radius-1);
+}
+
+.right-section .nav .profile{
+    display: flex;
+    gap: 2rem;
+    text-align: right;
+}
+
+.right-section .nav .profile .profile-photo{
+    width: 2.8rem;
+    height: 2.8rem;
+    border-radius: 50%;
+    overflow: hidden;
+}
 /* fim do navbar */
 
-.menulateral {
-    height: 40px;
+/* inicio sidebar */
+a{
+    color: var(--color-dark);
+}
+
+img{
+    display: block;
+    width: 100%;
+    object-fit: cover;
+}
+
+h1{
+    font-weight: 800;
+    font-size: 1.8rem;
+}
+
+h2{
+    font-weight: 600;
+    font-size: 1.4rem;
+}
+
+h3{
+    font-weight: 500;
+    font-size: 0.87rem;
+}
+
+small{
+    font-size: 0.76rem;
+}
+
+p{
+    color: var(--color-dark-variant)
+}
+
+b{
+    color: var(--color-dark);
+}
+
+.text-muted{
+    color: var(--color-info-dark);
+}
+
+.primary{
+    color: var(--color-primary);
+}
+
+.danger{
+    color: var(--color-danger);
+}
+
+.success{
+    color: var(--color-success);
+}
+
+.warning{
+    color: var(--color-warning)
+}
+
+/* inicio da constomização do sidebar */
+aside .sidebar{
+    display: flex;
+    flex-direction: column;
+    background-color: var(--color-white);
+    box-shadow: var(--box-shadow);
+    border-radius: 18px;
+    margin-left: 50px;
+    width: 23vh;
+    height: 65vh;
+    position: relative;
+    top: 1.5rem;
+    transition: all 0.3s ease;
+}
+
+aside .sidebar:hover{
+    box-shadow: none;
+}
+
+aside .sidebar a{
+    display: flex;
+    align-items: center;
+    height: 3.7rem;
+    color: 3.7rem;
+    gap: 1rem;
+    position: relative;
+    margin-left: 3rem;
+    transition: all 0.3s ease;
+}
+
+aside .sidebar a span{
+    font-size: 2rem;
+    transition: all 0.3s ease;
+}
+
+/* adiciona o "logout pra baixo" */
+aside .sidebar a:last-child{
+    position: absolute;
+    bottom: 2rem;
+    width: 100%;
+}
+
+aside .sidebar a.active{
+    width: 100%;
+    color: var(--color-primary);
+    background-color: var(--color-light);
+    margin-left: 0;
+}
+
+/* adiciona barrinha lateral indicando a página */
+aside .sidebar a.active::before{
+    content: '';
+    width: 6px;
+    height: 18px;
+    background-color: var(--color-primary);
+}
+
+aside .sidebar a.active span{
+    color: var(--color-primary);
+    margin-left: calc(1rem - 3px);
+}
+
+/* modifica as cores */
+aside .sidebar a:hover{
+    color: var(--color-primary);  
+}
+
+/* faz a animação para o lado */
+aside .sidebar a:hover span{
+    margin-left: 0.6rem;
+}
+
+/* adiciona formato a notificação de mensagem */
+aside .sidebar .message-count{
+    background-color: var(--color-danger);
+    padding: 2px 6px;
+    color: var(--color-white);
+    font-size: 11px;
+    border-radius: var(--border-radius-1);
 }
 
 .input {
-    width: 100%;
-    height: 55px;
-    background-color: #ffffff;
+    width: 150px;
+    height: 40px;
+    background-color: var(--color-dark);
     display: flex;
     justify-content: center;
     padding: 10px;
@@ -72,4 +341,383 @@ body {
     justify-content: center;
     padding: 10px;
     border-radius: 5px;
+}
+/* fim do sidebar */
+
+/* div para a logo do site */
+aside .toggle{
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    margin-left: 0.5rem;
+}
+
+aside .toggle .logo{
+    display: flex;
+    gap: 0.5rem;
+}
+
+aside .toggle .logo img{
+    width: 8rem;
+    height: 8rem;
+    border-radius: 0.5rem;
+}
+
+aside .toggle .close{
+    padding-right: 1rem;
+    display: none;
+}
+
+/* estilização para div dos graficos */
+.container{
+    display: grid;
+    width: 100%;
+    margin: 30px;
+    gap: 2rem;
+    grid-template-columns: 20rem auto ;
+}
+
+.analyse{
+    width: 1600px;
+    margin-left: 130px;
+}
+
+aside{
+    height: 100%;
+}
+
+.grafics{
+    background-color: var(--color-white);
+}
+
+/* Responsividade */
+@media screen and (max-width: 2080px) {
+    .logo1{
+        margin-left: 800px;
+    }
+    
+    aside .sidebar{
+        width: 20vh;
+    }
+
+    .analyse{
+        width: 1500px;
+        margin-left: 130px;
+    }
+}
+
+@media screen and (max-width: 1980px) {
+    .logo1{
+        margin-left: 750px;
+    }
+    
+    aside .sidebar{
+        width: 20vh;
+    }
+
+    .analyse{
+        width: 1450px;
+        margin-left: 130px;
+    }
+}
+
+@media screen and (max-width: 1925px) {
+    .logo1{
+        margin-left: 650px;
+    }
+    
+    aside .sidebar{
+        width: 20vh;
+    }
+
+    .analyse{
+        width: 1350px;
+        margin-left: 130px;
+    }
+}
+
+@media screen and (max-width: 1825px) {
+    .logo1{
+        margin-left: 550px;
+    }
+    
+    aside .sidebar{
+        width: 20vh;
+    }
+
+    .analyse{
+        width: 1250px;
+        margin-left: 130px;
+    }
+}
+
+@media screen and (max-width: 1725px) {
+    .logo1{
+        margin-left: 450px;
+    }
+    
+    aside .sidebar{
+        width: 20vh;
+    }
+
+    .analyse{
+        width: 1150px;
+        margin-left: 130px;
+    }
+}
+
+@media screen and (max-width: 1625px) {
+    .logo1{
+        margin-left: 350px;
+    }
+    
+    aside .sidebar{
+        width: 20vh;
+    }
+
+    .analyse{
+        width: 1050px;
+        margin-left: 130px;
+    }
+}
+
+@media screen and (max-width: 1525px) {
+    .logo1{
+        margin-left: 250px;
+    }
+    
+    aside .sidebar{
+        width: 20vh;
+    }
+
+    .analyse{
+        width: 950px;
+        margin-left: 130px;
+    }
+}
+
+@media screen and (max-width: 1425px) {
+    .logo1{
+        margin-left: 170px;
+    }
+    
+    aside .sidebar{
+        width: 20vh;
+    }
+
+    .analyse{
+        width: 950px;
+        margin-left: 130px;
+    }
+
+    .container{
+        grid-template-columns: 17rem auto ;
+    }
+}
+
+@media screen and (max-width: 1350px) {
+    .logo1{
+        margin-left: 50px;
+    }
+    
+    aside .sidebar{
+        width: 20vh;
+    }
+
+    .analyse{
+        width: 850px;
+        margin-left: 130px;
+    }
+
+    .container{
+        grid-template-columns: 15rem auto ;
+    }
+}
+
+@media screen and (max-width: 1225px) {
+    .logo1{
+        margin-left: 1px;
+    }
+
+    .container{
+        width: 95%;
+        grid-template-columns: 8rem
+        auto 23rem;
+    }
+    
+    aside .sidebar{
+        width: 10vh;
+        margin-left: 2rem;
+    }
+
+    .analyse{
+        width: 950px;
+        margin-left: 70px;
+    }
+
+    aside .logo h2{
+        display: none;
+    }
+
+    aside .sidebar h3{
+        display: none;
+    }
+}
+
+@media screen and (max-width: 1180px) {
+    .logo1{
+        margin-left: 1px;
+    }
+
+    .container{
+        width: 85%;
+        grid-template-columns: 8rem
+        auto 23rem;
+    }
+    
+    aside .sidebar{
+        width: 10vh;
+        margin-left: 2rem;
+    }
+
+    .analyse{
+        width: 900px;
+        margin-left: 70px;
+    }
+
+    aside .logo h2{
+        display: none;
+    }
+
+    aside .sidebar h3{
+        display: none;
+    }
+}
+
+@media screen and (max-width: 1125px) {
+    .logo1{
+        margin-left: 1px;
+    }
+
+    .container{
+        width: 85%;
+        grid-template-columns: 8rem
+        auto 23rem;
+    }
+    
+    aside .sidebar{
+        width: 10vh;
+        margin-left: 2rem;
+    }
+
+    .analyse{
+        width: 850px;
+        margin-left: 70px;
+    }
+
+    aside .logo h2{
+        display: none;
+    }
+
+    aside .sidebar h3{
+        display: none;
+    }
+}
+
+@media screen and (max-width: 758px) {
+    .container{
+        width: 100%;
+        grid-template-columns: 1fr;
+        padding: 0 var(--padding-1);
+    }
+
+    aside{
+        position: fixed;
+        background-color: var(--color-white);
+        width: 15rem;
+        z-index: 3;
+        box-shadow: 1rem 3rem 4rem var(--color-light);
+        height: 100vh;
+        left: -100%;
+        display: none;
+        animation: showMenu 0.4s ease forwards;
+    }
+
+    @keyframes showMenu {
+        to{
+            left: 0;
+        }
+    }
+
+    aside .logo{
+        margin-left: 1rem;
+    }
+
+    aside .logo h2{
+        display: inline;
+    }
+
+    aside .sidebar h3{
+        display: inline;
+    }
+
+    aside .sidebar a{
+        width: 100%;
+        height: 3.4rem;
+    }
+
+    aside .sidebar a:last-child{
+        position: absolute;
+        bottom: 5rem;
+    }
+
+    aside .toggle .close{
+        display: inline-block;
+        cursor: pointer;
+    }
+
+    main{
+        margin-top: 8rem;
+        padding: 0 1rem;
+    }
+
+    .navbar{
+        position: fixed;
+        top: 0;
+        left: 0;
+        align-items: center;
+        background-color: var(--color-navbar);
+        padding: 0 var(--padding-1);
+        height: 4.6rem;
+        width: 100%;
+        z-index: 2;
+        box-shadow: 0 1rem 1rem var(--color-light);
+        margin: 0;
+    }
+
+    .right-section{
+        width: 94%;
+        margin: 0 4rem;
+    }
+
+    /* .right-section .nav{ 
+
+    }*/
+
+    .right-section .profile .info{
+        display: none;
+    }
+
+    .right-section .nav button{
+        display: inline-block;
+        background-color: transparent;
+        cursor: pointer;
+        color: var(--color-dark);
+        position: absolute;
+        left: 1rem;
+    }
+
+    .right-section .nav button span{
+        font-size: 2rem;
+    }
 }
