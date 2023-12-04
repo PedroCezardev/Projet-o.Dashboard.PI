@@ -1,153 +1,329 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>DashMetrics</title>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <link rel="icon" href="signofhealth_medical_10742.ico">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
-    <script src="https://kit.fontawesome.com/39cab9573d.js" crossorigin="anonymous"></script>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="main.css" media="screen" />
+  <link rel="icon" type="image/svg" href="image/logo.svg"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+
+
+  <link rel="stylesheet" href="css/stely.css">
+
+  <title>Descrição Dash Metrics</title>
 </head>
-
 <body>
 
-    <header>
 
-        <div class="container-fluid">
+<header class="header">
 
-            <!--Navbar-->
-            <div class="row">
-                <nav class="navbar navbar-dark fixed-top" style="background-color:#01152e;">
-                    <div class="container-fluid">
-                    
-                        <a href="index.html" class="navbar-brand" style="color: rgb(255, 255, 255);">Dash Metrics</a>
+  <section class="flex">
 
-                        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar"
-                            aria-labelledby="offcanvasNavbarLabel">
-                        </div>
+    <a href="#" class="logo">
+      <img src="image/logo_branca.svg" alt="logo">
+    </a>
+    
+    <nav class="navbar">
+      <a href="index.html">Dashboard</a>
+      <a href="#about">Sobre</a>
+      <a href="#service">Serviços</a>
+      <a href="#team">Time</a>
+      <a href="#contact">Contato</a>
+      <a href="#faq">Perguntas</a>
+    </nav>
 
-                    </div>
-                </nav>
-            </div>
+    <div class="fas fa-bars"></div>
 
-            </nav>
-    </header>
+  </section>
 
-    <main class="main-content">
+</header>
 
-        <section class="slider">
+<div id="home" class="home">
 
-            <h1 id="home" style="color: darkblue;" class="div-texto">Protótipos de Gráficos usando o Chart.Js:</h1>
-            <h5 id="home" style="color: rgb(0, 0, 0);" class="div-texto1">Este site tem o intuito de mostrar um
-                Protótipo
-                de Gráficos que usaremos no nosso Dashboard intitulado de DashMetrics, que possuirá todas ferramentas
-                necessárias para um Analista de Dados precisa para desenvolver seu trabalho.</h5>
-
-            <div class="konteiner">
-
-                <h2 id="home" style="color: darkblue;" class="div-texto">Nosso protótipo Inicial:</h2>
-                <br>
-
-                <div class="imagem">
-                    <img src="img/Dashboard.png" />
-                </div>
-
-            </div>
+  <div class="content">
+    <h1>Sustenta Recife</h1>
+    <p>Repensar, Recusar, Reduzir, Reutilizar e Reciclar</p>
+    <a href="#about" class="btn">Iniciar</a>
+  </div>
 
 
-            <div id="team" class="team">
+  <div class="wave wave1"></div>
+  <div class="wave wave2"></div>
+  <div class="wave wave3"></div>
 
-                <br>
+  <div class="fas fa-cog nut1"></div>
+  <div class="fas fa-cog nut2"></div>
 
-                <div class="heading">
-                    <h1 style="color: darkblue;">Nossa Equipe</h1>
-                </div>
 
-                <div class="row">
+</div>
 
-                    <div class="card">
-                        <div class="image">
-                            <img src="img/pedro.jpg" alt="">
-                        </div>
-                        <div class="info">
-                            <h3>Pedro Cezar</h3>
 
-                            <div class="icons">
-                                <a href="https://www.linkedin.com/in/pedro-cezar-77a444270/"
-                                    class="fab fa-linkedin"></a>
-                                <a href="https://github.com/PedroCezardev" class="fab fa-github"></a>
-                                <a href="https://www.instagram.com/_pedrodev0/" class="fab fa-instagram"></a>
-                            </div>
-                        </div>
-                    </div>
+<section id="about" class="about">
 
-                    <div class="card">
-                        <div class="image">
-                            <img src="img/jhon.jpg" alt="">
-                        </div>
-                        <div class="info">
-                            <h3>Jhones Bonifácio</h3>
-                            <div class="icons">
+<div class="heading"><h1>Sobre Nós</h1></div>
 
-                                <a href="https://instagram.com/_mmariribeiro?igshid=OGQ5ZDc2ODk2ZA=="
-                                    class="fab fa-instagram"></a>
-                            </div>
-                        </div>
-                    </div>
+<div class="row">
 
-                    <div class="card">
-                        <div class="image">
-                            <img src="img/mayara.jpg" alt="">
-                        </div>
-                        <div class="info">
-                            <h3>Mayara Nascimento</h3>
-                            <div class="icons">
-                                <a href="https://www.linkedin.com/in/mayarawyrlanascimento/"
-                                    class="fab fa-linkedin"></a>
-                                <a href="https://github.com/Mayaranasciment0" class="fab fa-github"></a>
-                                <a href="https://instagram.com/_mayaranascimentoo?utm_source=qr&igshid=MThlNWY1MzQwNA=="
-                                    class="fab fa-instagram"></a>
-                            </div>
-                        </div>
-                    </div>
+  <div class="content">
+    <h3>Cidades e Comunidades Sustentáveis</h3>
+    <p>Sustenta Recife é uma organização comprometida com a sustentabilidade na cidade de Recife. Nossa iniciativa ecológica busca promover a conscientização sobre a importância de repensar, recusar, reduzir, reutilizar e reciclar, a fim de criar um impacto positivo nas vidas das pessoas e no planeta como um todo.</p>
+    <a href="#service"><button class="btn">Saiba mais</button></a>
+  </div>
 
-                    <div class="card">
-                        <div class="image">
-                            <img src="img/danilo.jpg" alt="">
-                        </div>
-                        <div class="info">
-                            <h3>Danilo Santana</h3>
-                            <span>Desenvolvedor Junior</span>
-                        </div>
-                    </div>
+  <div class="image">
+    <img src="image/about-img.svg" alt="">
+  </div>
 
-                </div>
+</div>
 
-            </div>
 
-    </main>
+</section>
 
+
+<section id="service" class="service">
+
+  <div class="heading"><h1>Serviços</h1></div>
+
+  <div class="box-container">
+
+    <div class="box">
+      <div class="image">
+        <img src="image/app.svg" alt="">
+      </div>
+      <div class="content">
+        <h3>Moderno</h3>
+        <p>Sustenta Recife é uma inovação tecnológica que conecta pessoas e comunidades à sustentabilidade, promovendo a conscientização e a participação ativa em ações sustentáveis.</p>
+      </div>
+    </div>
+
+    <div class="box">
+      <div class="image">
+        <img src="image/app-desk.svg" alt="">
+      </div>
+      <div class="content">
+        <h3>Diferente</h3>
+        <p>Com gamificação e acessibilidade, este aplicativo envolvente promove práticas sustentáveis, permitindo que pessoas e comunidades de diversos perfis participem ativamente. Uma ferramenta poderosa para mobilizar todos em prol de um futuro sustentável.</p>
+      </div>
+    </div>
+
+    <div class="box">
+      <div class="image">
+        <img src="image/cart.svg" alt="">
+      </div>
+      <div class="content">
+        <h3>Inclusivo</h3>
+        <p>Nossa aplicação é acessível a todos, inclusive aqueles sem acesso ao smartphone. Os catadores podem recarregar seu cartão em um eco ponto e trocar por produtos em estabelecimentos locais.</p>
+      </div>
+    </div>
+
+    <div class="box">
+      <div class="image">
+        <img src="image/telas-app.svg" alt="">
+      </div>
+      <div class="content">
+        <h3>Protótipo Navegável</h3>
+        <p>Aqui, oferecemos a você acesso ao nosso protótipo navegável e apresentamos nossa proposta como empresa.</p>
+        <a href="https://www.figma.com/proto/1E0qCo0JaWvUtVM3Y2NcNU/Untitled?type=design&node-id=0-1&scaling=scale-down&page-id=0%3A1&starting-point-node-id=237%3A241" class="btn">Acessar</a>
+      </div>
+    </div>
+  </div>
+  
+</section>
+
+
+
+
+<div id="team" class="team">
+
+<div class="heading"><h1>Nosso Time</h1></div>
+
+<div class="row">
+
+<div class="card">
+  <div class="image">
+    <img src="image/bia.jpg" alt="">
+  </div>
+  <div class="info">
+    <h3>Anna Beatryz</h3>
+    <span>Desenvolvedora Full Stack e Designer</span>
+    <div class="icons">
+      <a href="https://www.linkedin.com/in/anna-beatryz-0508a4233/" class="fab fa-linkedin"></a>
+      <a href="https://github.com/AgedAnna" class="fab fa-github"></a>
+      <a href="https://www.instagram.com/_beatryz.melo_/" class="fab fa-instagram"></a>
+    </div>
+  </div>
+</div>
+
+<div class="card">
+  <div class="image">
+    <img src="image/miguel.jpeg" alt="">
+  </div>
+  <div class="info">
+    <h3>Pedro Miguel</h3>
+    <span>Web Designer</span>
+    <div class="icons">
+      <a href="https://www.linkedin.com/in/joao-miguel-061270260" class="fab fa-linkedin"></a>
+      <a href="https://github.com/jjjmiguel" class="fab fa-github"></a>
+      <a href="https://www.instagram.com/jjj_miguel/" class="fab fa-instagram"></a>
+    </div>
+  </div>
+</div>
+
+<div class="card">
+  <div class="image">
+    <img src="image/jhon.jpg" alt="">
+  </div>
+  <div class="info">
+    <h3>Jhones Bonifácio</h3>
+    <span>Engenheiro de Software e Videomaker</span>
+    <div class="icons">
+      <a href="https://www.linkedin.com/in/jhones-bonifacio-da-silva-350817270/" class="fab fa-linkedin"></a>
+      <a href="https://github.com/iaejhon444" class="fab fa-github"></a>
+      <a href="https://www.instagram.com/iae.jhonzn/" class="fab fa-instagram"></a>
+    </div>
+  </div>
+</div>
+
+<div class="card">
+  <div class="image">
+    <img src="image/mayara.jpeg" alt="">
+  </div>
+  <div class="info">
+    <h3>Mayara Nascimento</h3>
+    <span>Designer</span>
+    <div class="icons">
+      <a href="https://github.com/Mayaranasciment0" class="fab fa-linkedin"></a>
+      <a href="https://github.com/Mayaranasciment0" class="fab fa-github"></a>
+      <a href="https://instagram.com/_mayaranascimentoo?igshid=MzNlNGNkZWQ4Mg==" class="fab fa-instagram"></a>
+    </div>
+  </div>
+</div>
+
+<div class="card">
+  <div class="image">
+    <img src="image/salgado.jpg" alt="">
+  </div>
+  <div class="info">
+    <h3>Geovana Salgado</h3>
+    <span>Gestora da Informação</span>
+    <div class="icons">
+      <a href="https://www.linkedin.com/in/giovana-salgado-ramos-047525262/" class="fab fa-linkedin"></a>
+      <a href="https://github.com/salgadinho53" class="fab fa-github"></a>
+      <a href="#" class="fab fa-instagram"></a>
+    </div>
+  </div>
+</div>
+
+</div>
+
+</div>
+
+<section id="contact" class="contact">
+
+<div class="heading"><h1>Contato</h1></div>
+
+<div class="row">
+
+  <div class="image">
+    <img src="image/contact-img.svg" alt="">
+  </div>
+
+  <form>
+    <input id="firstName" class="input" type="text" placeholder="Primeiro nome">
+    <input id="lastName" class="input" type="text" placeholder="Segundo nome">
+    <input id="email" class="input" type="email" placeholder="email">
+    <textarea id="message" class="input" cols="30" rows="10" placeholder="mensagem"></textarea>
+    <input type="button" class="btn" value="Enviar mensagem" onclick="enviarEmail()">
+  </form>
+
+</div>
+
+</section>
+
+
+<section id="faq" class="faq">
+
+<div class="heading"><h1>Perguntas</h1></div>
+
+<div class="row">
+
+<div class="image">
+  <img src="image/faq-img.svg" alt="">
+</div>
+
+<div class="accordion-container">
+
+  <div class="accordion">
+    <div class="accordion-header">
+      <span>+</span>
+      <h3>Como o aplicativo Sustenta Recife incentiva a reciclagem por meio da gamificação?</h3>
+    </div>
+    <div class="accordion-body">
+      <p>O aplicativo Sustenta Recife utiliza pontos na plataforma para tornar a reciclagem uma atividade divertida e engajadora. Os usuários são recompensados ​com pontos, conquistas e níveis à medida que reciclam corretamente e atingem metas específicas.</p>
+    </div>
+  </div>
+
+  <div class="accordion">
+    <div class="accordion-header">
+      <span>+</span>
+      <h3> Como o projeto Sustenta Recife promove a inclusão de catadores de lixo que não têm acesso à tecnologia?</h3>
+    </div>
+    <div class="accordion-body">
+      <p>O projeto Sustenta Recife promove a inclusão de catadores de lixo ao fornecer uma rede de apoio e oportunidades para eles. Eles podem se cadastrar como parceiros do aplicativo, e agendar a coleta do material diretamente conosco indo em qualquer de nossos ecosponto, garantindo que todos possam participar do processo de reciclagem.</p>
+    </div>
+  </div>
+
+  <div class="accordion">
+    <div class="accordion-header">
+      <span>+</span>
+      <h3>Como o Sustenta Recife gera receita sendo a ponte entre a matéria-prima (lixo) e as empresas que compram esse material?</h3>
+    </div>
+    <div class="accordion-body">
+      <p> O Sustenta Recife gera receita por meio de parcerias com empresas que estão interessadas em adquirir material reciclável. O aplicativo atua como intermediário, conectando as empresas aos catadores ou aos pontos de coleta adequados. Dessa forma, o Sustenta Recife recebe uma comissão pela transação realizada.</p>
+    </div>
+  </div>
+
+  <div class="accordion">
+    <div class="accordion-header">
+      <span>+</span>
+      <h3>Quais são os benefícios para os usuários do Sustenta Recife além da gamificação?</h3>
+    </div>
+    <div class="accordion-body">
+      <p>Além da gamificação, os usuários do Sustenta Recife se beneficiam ao contribuir para a preservação do meio ambiente por meio da reciclagem. Eles também podem ganhar recompensas adicionais, como descontos em estabelecimentos parceiros do aplicativo ou participação em sorteios de produtos sustentáveis.</p>
+    </div>
+  </div>
+
+  <div class="accordion">
+    <div class="accordion-header">
+      <span>+</span>
+      <h3> O Sustenta Recife atua apenas na cidade de Recife ou expandiu para outras regiões?</h3>
+    </div>
+    <div class="accordion-body">
+      <p>inicialmente, o projeto Sustenta Recife foi desenvolvido para a cidade de Recife. No entanto, devido ao seu sucesso e impacto positivo, o projeto expandiu para outras regiões próximas, visando alcançar um público mais amplo e promover a reciclagem sustentável em outras localidades.</p>
+    </div>
+  </div>
+
+</div>
+
+</div>
+</section>
+
+<footer class="footer">
+
+  <section class="flex">
+    <div class="links">
+      <a href="#" class="fab fa-facebook-f"></a>
+      <a href="#" class="fab fa-instagram"></a>
+    </div>
     </section>
 
-    <!-- inicio do rodapé do site -->
-    <footer class="edit-footer">
+</footer>
 
-        <section class="flex">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
-        </section>
+<script src="js/main.js"></script>
 
-    </footer>
-
-    <script src="script.js"></script>
-
-
-
+  
 </body>
-
 </html>

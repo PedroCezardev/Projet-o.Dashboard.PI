@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="responsive.css">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="https://cdn.tailwindcss.com"></script>
     <title>Dash Metrics</title>
@@ -56,7 +57,7 @@
         <aside class="aside">
             <div class="toggle">
                 <div class="logo">
-                    <img src="img/imagem.logo.png">
+                    <!-- <img src="img/imagem.logo.png"> -->
                     <!-- <h2>Dash<span class="danger">Metrics</span></h2> -->
                 </div>
                 <div class="close" id="close-btn">
@@ -69,23 +70,29 @@
 
             <!-- Início do side bar -->
             <div class="sidebar">
-                <a href="#">
+                <a href="index.html">
                     <span class="material-icons-sharp">
                         dashboard
                     </span>
                     <h3>Dashboard</h3>
+                </a>
+                <a href="Sobre.html">
+                    <span class="material-icons-sharp">
+                        receipt_long
+                    </span>
+                    <h3>Sobre</h3>
+                </a>
+                <a id="download" onclick="exportarGrafico()">
+                    <span class="material-icons-sharp">
+                        download
+                    </span>
+                   <h3>Exportar Gráfico</h3>
                 </a>
                 <a href="#">
                     <span class="material-icons-sharp">
                         person_outline
                     </span>
                     <h3>Usuários</h3>
-                </a>
-                <a href="#">
-                    <span class="material-icons-sharp">
-                        receipt_long
-                    </span>
-                    <a href="Sobre.html">Sobre</a>
                 </a>
                 <a href="#" class="active">
                     <span class="material-icons-sharp">
@@ -130,25 +137,13 @@
                     </span>
                     <h3>Sair</h3>
                 </a>
-                <a href="#">
-                    <span class="material-icons-sharp">
-                        logout
-                    </span>
-                    <a id="download" onclick="exportarGrafico()">Exportar Gráfico</a>
-                </a>
-
-                <div class="input">
+                <!-- <div class="input"> 
                     <input type="file" id="csvFile" accept=".csv">
                 </div>
                 <div class="select">
                     <label for="serie">Selecionar Série:</label>
                     <select class="select" id="series"></select>
-                </div>
-                <div class="export">
-
-                </div>
-
-                <span class="active">
+                </div>-->
             </div>
             <!-- Fim do sidebar -->
 
