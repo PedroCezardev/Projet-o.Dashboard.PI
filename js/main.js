@@ -10,10 +10,10 @@ $(document).ready(function(){
       $('.fa-bars').removeClass('fa-times');
       $('.navbar').removeClass('nav-toggle');
   
-      if($(window).scrollTop() > 30){
-        $('.header').css({'background':'#006414','box-shadow':'0 .2rem .5rem rgba(0,0,0,.4)'});
-      }else{
-        $('.header').css({'background':'none','box-shadow':'none'});
+      if ($(window).scrollTop() > 30) {
+        $('.header').css({'background': 'rgb(135, 109, 255)', 'box-shadow': '0 .2rem .5rem rgba(0,0,0,.4)'});
+      } else {
+        $('.header').css({'background': 'none', 'box-shadow': 'none'});
       }
     });
   
