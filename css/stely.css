@@ -279,7 +279,7 @@ section{
   display: flex;
   flex-flow: row;
   flex-wrap: wrap;
-  gap: 1.5rem;
+  gap: 2rem;
   align-items: center;
 }
 
