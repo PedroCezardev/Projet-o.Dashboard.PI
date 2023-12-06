@@ -14,5 +14,5 @@ Link dos nossos slides 📟: https://www.canva.com/design/DAF0AzOLWVE/NL8_G01TMc
 <p></p>
 Link do nosso prorótipo navegável 📱: https://www.figma.com/proto/eAMG8bH8D0iSStWBxYW75J/Dashboard.PI?node-id=2214-2&starting-point-node-id=2214%3A2
 <p></p>
-Link do nosso site 💻: https://pedrocezardev.github.io/Projeto.Dashboard.PI/Sobre.html
+Link do nosso site 💻: https://projeto-dashboard-pi.vercel.app/index.html
 </div>
