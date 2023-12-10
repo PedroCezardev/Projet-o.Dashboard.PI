@@ -86,13 +86,13 @@
                     <span class="material-icons-sharp">
                         download
                     </span>
-                   <h3>Exportar Gráfico</h3>
+                    <h3>Exportar Gráfico</h3>
                 </a>
-                <a href="#">
+                <a href="tutorial.html">
                     <span class="material-icons-sharp">
-                        person_outline
+                        inventory
                     </span>
-                    <h3>Usuários</h3>
+                    <h3>Tutorial</h3>
                 </a>
                 <a href="#" class="active">
                     <span class="material-icons-sharp">
@@ -102,16 +102,16 @@
                 </a>
                 <a href="#">
                     <span class="material-icons-sharp">
+                        person_outline
+                    </span>
+                    <h3>Usuários</h3>
+                </a>
+                <a href="#">
+                    <span class="material-icons-sharp">
                         mail_outline
                     </span>
                     <h3>tickets</h3>
                     <div class="span message-count">27</div>
-                </a>
-                <a href="#">
-                    <span class="material-icons-sharp">
-                        inventory
-                    </span>
-                    <h3>sale list</h3>
                 </a>
                 <a href="#">
                     <span class="material-icons-sharp">
@@ -151,11 +151,18 @@
 
         <div class="analyse">
             <!-- estrutura dos gráficos -->
-            <section class="grid grid-cols-3 gap-8" >
+            <section class="grid grid-cols-3 gap-8">
                 <div style=":root { --color-white: #fff}; background-color: var(--color-white); 
                 display: flex; justify-content: center; border-radius: 15px; box-shadow: var(--box-shadow); transition: all 0.3s ease;"
                     class=" h-96 col-span-1	grid-column: span 1 / span 1;">
                     <canvas id="chart1"></canvas>
+                    <!-- <div style="display: flex; padding-top: 260px; padding-right: 5px;">
+                        <a id="download" onclick="exportarGrafico()">
+                            <span class="material-icons-sharp">
+                                download
+                            </span>
+                        </a>
+                    </div> -->
                 </div>
                 <div style=":root { --color-white: #fff}; background-color: var(--color-white);
                 display: flex; justify-content: center; border-radius: 15px; box-shadow: var(--box-shadow); transition: all 0.3s ease;"
