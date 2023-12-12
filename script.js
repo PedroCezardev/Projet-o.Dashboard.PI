@@ -19,6 +19,20 @@ darkMode.addEventListener('click', () => {
     darkMode.querySelector('span:nth-child(2)').classList.toggle('active');
 })
 
+// função para exportar o gráfico
+function exportarGrafico(download) {
+    if (chartInstances.hasOwnProperty(id)) {
+      const chartCanvas = chartInstances[id].canvas;
+      const imagem = chartCanvas.toDataURL('image/png');
+      const link = document.createElement('a');
+      link.href = imagem;
+      link.download = 'grafico.png';
+      link.click();
+    } else {
+      alert('O gráfico não existe.');
+    }
+  }
+
 // requisição ao backend
 fetch('http://localhost:3000/consulta1')
     .then(raw_data => {

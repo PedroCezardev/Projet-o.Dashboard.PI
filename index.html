@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="responsive.css">
+    <link rel="stylesheet" href="css/responsive.css">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="https://cdn.tailwindcss.com"></script>
     <title>Dash Metrics</title>
@@ -82,7 +82,7 @@
                     </span>
                     <h3>Sobre</h3>
                 </a>
-                <a id="download" onclick="exportarGrafico()">
+                <a id="download" onclick="exportarGrafico(id)">
                     <span class="material-icons-sharp">
                         download
                     </span>
@@ -137,13 +137,6 @@
                     </span>
                     <h3>Sair</h3>
                 </a>
-                <!-- <div class="input"> 
-                    <input type="file" id="csvFile" accept=".csv">
-                </div>
-                <div class="select">
-                    <label for="serie">Selecionar Série:</label>
-                    <select class="select" id="series"></select>
-                </div>-->
             </div>
             <!-- Fim do sidebar -->
 
@@ -156,13 +149,6 @@
                 display: flex; justify-content: center; border-radius: 15px; box-shadow: var(--box-shadow); transition: all 0.3s ease;"
                     class=" h-96 col-span-1	grid-column: span 1 / span 1;">
                     <canvas id="chart1"></canvas>
-                    <!-- <div style="display: flex; padding-top: 260px; padding-right: 5px;">
-                        <a id="download" onclick="exportarGrafico()">
-                            <span class="material-icons-sharp">
-                                download
-                            </span>
-                        </a>
-                    </div> -->
                 </div>
                 <div style=":root { --color-white: #fff}; background-color: var(--color-white);
                 display: flex; justify-content: center; border-radius: 15px; box-shadow: var(--box-shadow); transition: all 0.3s ease;"
