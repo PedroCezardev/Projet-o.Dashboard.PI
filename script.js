@@ -34,7 +34,7 @@ function exportarGrafico(download) {
   }
 
 // requisição ao backend
-fetch('http://localhost:3000/consulta1')
+fetch('https://nodejs-production-d284.up.railway.app/consulta1')
     .then(raw_data => {
         return raw_data.json()
     }).then(data => {
@@ -65,7 +65,7 @@ fetch('http://localhost:3000/consulta1')
         });
     })
 
-fetch('http://localhost:3000/consulta2')
+fetch('https://nodejs-production-d284.up.railway.app/consulta2')
     .then(promessa => {
         return promessa.json()
     }).then(data => {
@@ -97,7 +97,7 @@ fetch('http://localhost:3000/consulta2')
 
     })
 
-fetch('http://localhost:3000/consulta3')
+fetch('https://nodejs-production-d284.up.railway.app/consulta3')
     .then(promess => {
         return promess.json()
     }).then(data => {
@@ -130,7 +130,7 @@ fetch('http://localhost:3000/consulta3')
 
     })
 
-fetch('http://localhost:3000/consulta4')
+fetch('https://nodejs-production-d284.up.railway.app/consulta4')
     .then(promess => {
         return promess.json()
     }).then(data => {
@@ -159,7 +159,7 @@ fetch('http://localhost:3000/consulta4')
 
     })
 
-fetch('http://localhost:3000/consulta5')
+fetch('https://nodejs-production-d284.up.railway.app/consulta5')
     .then(promess => {
         return promess.json()
     }).then(data => {
@@ -189,7 +189,7 @@ fetch('http://localhost:3000/consulta5')
 
     })
 
-fetch('http://localhost:3000/consulta6')
+fetch('https://nodejs-production-d284.up.railway.app/consulta6')
     .then(promess => {
         return promess.json()
     }).then(data => {
@@ -220,7 +220,7 @@ fetch('http://localhost:3000/consulta6')
 
     })
 
-fetch('http://localhost:3000/consulta7')
+fetch('https://nodejs-production-d284.up.railway.app/consulta7')
     .then(promess => {
         return promess.json()
     }).then(data => {
