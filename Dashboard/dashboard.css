@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
 
-:root  {
+:root {
     --color-primary: #6C9BCF;
     --color-danger: #FF0060;
     --color-success: #1B9C85;
@@ -34,7 +34,7 @@
     --box-shadow: 0 2rem 3rem var(--color-light);
 }
 
-*{
+* {
     margin: 0;
     padding: 0;
     outline: 0;
@@ -44,12 +44,12 @@
     box-sizing: border-box;
 }
 
-html{
+html {
     font-size: 12px;
     width: 100%;
 }
 
-body{
+body {
     width: 100%;
     height: 100%;
     font-family: 'Poppings', sans-serif;
@@ -61,7 +61,7 @@ body{
 }
 
 /* inicio navbar */
-.navbar {   
+.navbar {
     background-color: var(--color-navbar);
     overflow: hidden;
     display: flex;
@@ -83,7 +83,7 @@ body{
     color: black;
 }
 
-.logo1{
+.logo1 {
     font-weight: 800;
     font-size: 1.8rem;
     display: flex;
@@ -91,7 +91,7 @@ body{
     margin-left: 900px;
 }
 
-.logo{
+.logo {
     font-weight: 800;
     font-size: 1.8rem;
     display: flex;
@@ -106,11 +106,13 @@ body{
 }
 
 .dark-mode {
-    margin-right: 5px; /* margin do darkmode */
+    margin-right: 5px;
+    /* margin do darkmode */
 }
 
 .profile {
-    margin-right: 20px; /* margin do perfil */
+    margin-right: 20px;
+    /* margin do perfil */
 }
 
 /* Alinhar o .profile corretamente */
@@ -121,21 +123,21 @@ body{
 }
 
 /* estiliza o botão darkmode e o perfil */
-.right-section{
+.right-section {
     margin-top: 1.4rem;
 }
 
-.right-section .nav{
+.right-section .nav {
     display: flex;
     justify-content: end;
     gap: 2rem;
 }
 
-.right-section .nav button{
+.right-section .nav button {
     display: none;
 }
 
-.right-section .dark-mode{
+.right-section .dark-mode {
     background-color: var(--color-white);
     display: flex;
     justify-content: space-between;
@@ -144,10 +146,10 @@ body{
     width: 5.5rem;
     cursor: pointer;
     border-radius: var(--border-radius-1);
-    margin-left:700px;
+    margin-left: 700px;
 }
 
-.right-section .dark-mode span{
+.right-section .dark-mode span {
     font-size: 1.2rem;
     width: 50%;
     height: 100%;
@@ -156,86 +158,87 @@ body{
     justify-content: center;
 }
 
-.right-section .dark-mode span.active{
+.right-section .dark-mode span.active {
     background-color: var(--color-primary);
     color: var(--color-white);
     border-radius: var(--border-radius-1);
 }
 
-.right-section .nav .profile{
+.right-section .nav .profile {
     display: flex;
     gap: 2rem;
     text-align: right;
 }
 
-.right-section .nav .profile .profile-photo{
+.right-section .nav .profile .profile-photo {
     width: 2.8rem;
     height: 2.8rem;
     border-radius: 50%;
     overflow: hidden;
 }
+
 /* fim do navbar */
 
 /* inicio sidebar */
-a{
+a {
     color: var(--color-dark);
 }
 
-img{
+img {
     display: block;
     width: 100%;
     object-fit: cover;
 }
 
-h1{
+h1 {
     font-weight: 800;
     font-size: 1.8rem;
 }
 
-h2{
+h2 {
     font-weight: 600;
     font-size: 1.4rem;
 }
 
-h3{
+h3 {
     font-weight: 500;
     font-size: 0.87rem;
 }
 
-small{
+small {
     font-size: 0.76rem;
 }
 
-p{
+p {
     color: var(--color-dark-variant)
 }
 
-b{
+b {
     color: var(--color-dark);
 }
 
-.text-muted{
+.text-muted {
     color: var(--color-info-dark);
 }
 
-.primary{
+.primary {
     color: var(--color-primary);
 }
 
-.danger{
+.danger {
     color: var(--color-danger);
 }
 
-.success{
+.success {
     color: var(--color-success);
 }
 
-.warning{
+.warning {
     color: var(--color-warning)
 }
 
 /* inicio da constomização do sidebar */
-aside .sidebar{
+aside .sidebar {
     display: flex;
     flex-direction: column;
     background-color: var(--color-white);
@@ -249,11 +252,11 @@ aside .sidebar{
     transition: all 0.3s ease;
 }
 
-aside .sidebar:hover{
+aside .sidebar:hover {
     box-shadow: none;
 }
 
-aside .sidebar a{
+aside .sidebar a {
     display: flex;
     align-items: center;
     height: 4.5rem;
@@ -264,101 +267,179 @@ aside .sidebar a{
     transition: all 0.3s ease;
 }
 
-aside .sidebar a span{
+aside .sidebar a span {
     font-size: 2.5rem;
     transition: all 0.3s ease;
 }
 
 /* adiciona o "logout pra baixo" */
-aside .sidebar a:last-child{
+aside .sidebar a:last-child {
     position: absolute;
     bottom: 2rem;
     width: 100%;
     color: var(--color-danger);
 }
 
-aside .sidebar a.active{
+aside .sidebar a.active {
     width: 100%;
     color: var(--color-primary);
     background-color: var(--color-light);
     margin-left: 0;
+    border-radius: 20px 20px 0px 0px; 
 }
 
 /* adiciona barrinha lateral indicando a página */
-aside .sidebar a.active::before{
+aside .sidebar a.active::before {
     content: '';
     width: 6px;
     height: 18px;
     background-color: var(--color-primary);
 }
 
-aside .sidebar a.active span{
+aside .sidebar a.active span {
     color: var(--color-primary);
     margin-left: calc(1rem - 3px);
 }
 
 /* modifica as cores */
-aside .sidebar a:hover{
-    color: var(--color-primary);  
+aside .sidebar a:hover {
+    color: var(--color-primary);
 }
 
 /* faz a animação para o lado */
-aside .sidebar a:hover span{
+aside .sidebar a:hover span {
     margin-left: 0.6rem;
 }
 
 /* adiciona formato a notificação de mensagem */
-aside .sidebar .message-count{
+aside .sidebar .message-count {
     background-color: var(--color-danger);
     padding: 2px 6px;
     color: var(--color-white);
     font-size: 11px;
     border-radius: var(--border-radius-1);
 }
+
 /* fim do sidebar */
 
 /* div para a logo do site */
-aside .toggle{
+aside .toggle {
     display: flex;
     align-items: center;
     justify-content: left;
-    margin-left: 0.5rem;
+    margin-left: 50px;
 }
 
-aside .toggle .logo{
+aside .toggle .logo {
     display: flex;
     gap: 0.5rem;
 }
 
-aside .toggle .logo img{
+aside .toggle .logo img {
     width: 8rem;
     height: 8rem;
     border-radius: 0.5rem;
 }
 
-aside .toggle .close{
+aside .toggle .close {
     padding-right: 1rem;
     display: none;
 }
 
+/* estilização de seleção csv*/
+.datacsv {
+    width: 23vh;
+    background-color: var(--color-white);
+    height: 10vh;
+    border-radius: 18px;
+    transition: all 0.3s ease;
+}
+
+.input {
+    margin: 7px;
+    transition: all 0.3s ease;
+}
+
+.select {
+    margin: 7px;
+    transition: all 0.3s ease;
+}
+
+.input #csvFile {
+    background-color: var(--color-navbar);
+    border: none;
+    color: white;
+    padding: 3px 5px;
+    text-align: center;
+    text-decoration: none;
+    display: flex;
+    font-size: 10.5px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+/* Estiliza o botão e posiciona sobre o input */
+.file-upload-button {
+    background-color: var(--color-navbar);
+    border: none;
+    color: white;
+    padding: 5px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 13px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+#series.select{
+    background-color: var(--color-white);
+}
+
 /* estilização para div dos graficos */
-.container{
+.container {
     display: grid;
     width: 100%;
     margin: 30px;
     gap: 2rem;
-    grid-template-columns: 20rem auto ;
+    grid-template-columns: 20rem auto;
 }
 
-.analyse{
+/* estilização para as divs dos graficos */
+.layout{
+    background-color: var(--color-white); 
+    display: flex; 
+    justify-content: center; 
+    border-radius: 15px; 
+    box-shadow: var(--box-shadow); 
+    transition: all 0.3s ease;
+    height: 288px;
+}
+
+.layout-space{
+    background-color: var(--color-white); 
+    display: flex; 
+    justify-content: center; 
+    border-radius: 15px; 
+    box-shadow: var(--box-shadow); 
+    transition: all 0.3s ease;
+    height: 288px;
+    width: 692px;
+}
+
+.analyse {
     width: 1600px;
     margin-left: 130px;
 }
 
-aside{
+aside {
     height: 100%;
 }
 
-.grafics{
+.grafics {
     background-color: var(--color-white);
 }

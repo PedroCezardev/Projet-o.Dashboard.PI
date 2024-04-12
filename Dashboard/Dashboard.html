@@ -6,9 +6,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" rel="stylesheet">
-    <link rel="stylesheet" href="/reportar/main.css">
+    <link rel="stylesheet" href="dashboard.css">
     <link rel="stylesheet" href="/css/responsive.css">
-    <title>Reportar</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/papaparse@5.3.0/papaparse.min.js"></script>
+    <title>Inserir Dados CSV</title>
 </head>
 
 <body>
@@ -47,6 +50,7 @@
                 </div>
 
             </div>
+        </div>
     </nav>
     <!-- Fim do navbar -->
 
@@ -54,11 +58,19 @@
 
         <!-- estrutura do sidebar -->
         <aside class="aside">
+
             <div class="toggle">
-                <div class="logo">
-                    <!-- <img src="img/imagem.logo.png"> -->
-                    <!-- <h2>Dash<span class="danger">Metrics</span></h2> -->
+                <div class="datacsv">
+                    <div class="input">
+                        <input type="file" id="csvFile" accept=".csv" class="custom-file-input">
+                    </div>
+                    <div class="select">
+                        <label for="serie" class="file-upload-button">Selecionar Série:</label>
+                        <select class="select" id="series"></select>
+                    </div>
                 </div>
+
+
                 <div class="close" id="close-btn">
                     <span class="material-icons-sharp">
                         close
@@ -69,7 +81,7 @@
 
             <!-- Início do side bar -->
             <div class="sidebar">
-                <a href="/Dashboard/Dashboard.html">
+                <a href="/Dashboard/Dashboard.html" class="active">
                     <span class="material-icons-sharp">
                         dashboard
                     </span>
@@ -105,8 +117,9 @@
                     </span>
                     <h3>Dashchat</h3>
                 </a>
-                <a href="/reportar/reportar.html" class="active">
-                    <span class="material-icons-sharp" >
+                
+                <a href="/reportar/reportar.html">
+                    <span class="material-icons-sharp">
                         report_gmailerrorred
                     </span>
                     <h3>Reportar</h3>
@@ -137,41 +150,49 @@
                 </a>
             </div>
             <!-- Fim do sidebar -->
+
         </aside>
 
-        <div class="">
-            <section class="group">
-                <div class="top">
-                    <div class="title">
-                        <span class="material-icons-sharp">
-                            report_gmailerrorred
-                        </span>
-                        <div class="report">
-                            <h1 style="font-size: 2.3rem;">Reportar</h1>
-                        </div>
-                    </div>
-                    <div class="text">
-                        <p style="color: aliceblue;">Digite o que você deseja reportar:<p>
-                    </div>
+        <div class="analyse">
+            <!-- estrutura dos gráficos -->
+            <section class="grid grid-cols-3 gap-8">
+                <div class="layout"
+                    class=" h-96 col-span-1	grid-column: span 1 / span 1;">
+                    <canvas id="grafico"></canvas>
                 </div>
-                <p id="status"></p>
-                <div id="history">
-                    <!-- as mensagens -->
+                <div class="layout"
+                    class=" h-96 grid-column: span 1 / span 1;">
+                    <canvas id="chart2"></canvas>
                 </div>
-                <div class="low">
-                    <input id="message-input" type="text" placeholder="Digite aqui...">
-                    <button id="btn-submit" onclick="sendMessage()">
-                        <span class="material-icons-sharp">
-                            send
-                        </span>
-                    </button>
+                <div class="layout"
+                    class="h-96	grid-column: span 1 / span 1;">
+                    <canvas id="chart3"></canvas>
+                </div>
+                <div class="layout"
+                    class=" h-96 col-span-1 	grid-column: span 2 / span 2;">
+                    <canvas id="chart5"></canvas>
+                </div>
+                <div style=":root { --color-white: #fff}; background-color: var(--color-white); 
+                display: flex; justify-content: center; border-radius: 15px; box-shadow: var(--box-shadow); transition: all 0.3s ease;"
+                    class="h-96 col-span-2	grid-column: span 1 / span 1;">
+                    <canvas id="chart4"></canvas>
+                </div>
+                <div class="layout"
+                    class="h-96	grid-column: span 1 / span 1;">
+                    <canvas id="chart6"></canvas>
+                </div>
+                <div style=":root { --color-white: #fff}; background-color: var(--color-white); 
+                display: flex; justify-content: center; border-radius: 15px; box-shadow: var(--box-shadow); transition: all 0.3s ease;"
+                    class="h-96 col-span-2 	grid-column: span 2 / span 2;">
+                    <canvas id="chart7"></canvas>
                 </div>
             </section>
         </div>
 
     </div>
 
-    <script src="/reportar/script.js"></script>
+    <script src="/js/script.js"></script>
+    <script src="script.js"></script>
 </body>
 
 </html>

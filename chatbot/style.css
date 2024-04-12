@@ -13,6 +13,7 @@
     --color-background: #f6f6f9;
     --color-fundo: #E0E2FF;
     --color-navbar: #876DFF;
+    --color-gradient: #5c6bc0;
 
     --card-border-radius: 2rem;
     --border-radius-1: 0.4rem;
@@ -207,7 +208,7 @@ small{
 }
 
 p{
-    color: var(--color-dark-variant)
+    color: var(--color-dark-variant);
 }
 
 b{
@@ -241,7 +242,8 @@ aside .sidebar{
     background-color: var(--color-white);
     box-shadow: var(--box-shadow);
     border-radius: 18px;
-    margin-left: 50px;
+    margin-left: 80px;
+    margin-top: 30px;
     width: 23vh;
     height: 70vh;
     position: relative;
@@ -341,24 +343,127 @@ aside .toggle .close{
     display: none;
 }
 
-/* estilização para div dos graficos */
+/* configuração layout principal */
 .container{
-    display: grid;
-    width: 100%;
-    margin: 30px;
-    gap: 2rem;
-    grid-template-columns: 20rem auto ;
+    display: flex;
 }
 
-.analyse{
-    width: 1600px;
-    margin-left: 130px;
-}
-
-aside{
-    height: 100%;
-}
-
-.grafics{
+.group{
     background-color: var(--color-white);
+    width: 1500px;
+    height: 900px;
+    margin-left: 180px;
+    margin-top: 30px;
+    border-radius: 15px;
+    box-shadow: var(--box-shadow);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.top{
+    background-color: #181a1e;
+    border-radius: 15px;
+    height: 14rem;
+    color: var(--color-background);
+    background-color: var(--color-gradient);
+    display: flex;
+    flex-direction: column;   
+}
+
+.title{
+    display: flex;
+    margin-top: 1rem;
+    margin-left: 3rem;
+}
+
+.title span{
+    font-size: 4rem;
+}
+
+.report{
+    margin-left: 1rem;
+    margin-top: 0.4rem;
+}
+
+.text{
+    color: var(--color-white);
+    font-size: 2.3rem;
+    text-align: center;
+    margin-top: 1.2rem;
+}
+
+/* estilização div de baixo */
+.low{
+    background-color: var(--color-gradient);
+    border-radius: 15px;
+    height: 8rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* estilização botao */
+button{
+    background-color: var(--color-fundo);
+    color: var(--color-dark);
+    padding: 10px 35px;
+    border: 1px solid transparent;
+    border-radius: 8px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    margin-left: 20px;
+    cursor: pointer;
+    height: 4rem;
+    width: 10rem;
+}
+
+/* animação do botão */
+#btn-submit:hover{
+    background-color: var(--color-light);
+    transition: 0.4s;
+}
+
+/* estilização formulario */
+.container input{
+    background-color: var(--color-fundo);
+    margin: 8px 0;
+    padding: 10px 15px;
+    font-size: 18px;
+    border-radius: 8px;
+    width: 110rem;
+    height: 5rem;
+    outline: none;
+}
+
+/* alterar a cor da letra do formulario */
+.container input::placeholder{
+    color: var(--color-dark);
+}
+
+/* estilização das mensagens */
+#history{
+    padding: 1rem;
+    overflow: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    height: 100%;
+} 
+
+/* estilização da caixa do texto */
+.message-box{
+    display: flex;
+    justify-content: flex-end;
+}
+
+/* estilização da mensagem do texto */
+.message{
+    background-color: var(--color-dark);
+    border-radius: 10px;
+    padding: 1rem;
+    color: var(--color-fundo);
+    margin: 0;
+    font-size: 1.5rem;
 }
