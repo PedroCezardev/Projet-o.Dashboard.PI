@@ -1,4 +1,4 @@
-// customização menu hamburguer
+/* customização menu hamburguer
 const sideMenu = document.querySelector('aside');
 const menuBtn = document.getElementById('menu-btn');
 const closeBtn = document.getElementById('close-btn');
@@ -18,12 +18,13 @@ darkMode.addEventListener('click', () => {
     darkMode.querySelector('span:nth-child(1)').classList.toggle('active');
     darkMode.querySelector('span:nth-child(2)').classList.toggle('active');
 })
-// fim
+*/ //fim
 
 
-import Chart from 'chart.js/auto'
+// adicionar os gráficos com dados fictícios
 
-(async function() {
+// chart roscas
+(async function () {
   const data = [
     { year: 2010, count: 10 },
     { year: 2011, count: 20 },
@@ -35,7 +36,209 @@ import Chart from 'chart.js/auto'
   ];
 
   new Chart(
-    document.getElementById('grafico'),
+    document.getElementById('chart1'),
+    {
+      type: 'doughnut',
+      data: {
+        labels: data.map(row => row.year),
+        datasets: [
+          {
+            label: 'Acquisitions by year',
+            data: data.map(row => row.count),
+            backgroundColor: ["#9B57CC", "#6D74F2", "#65A6FA"],
+            borderColor: "#FFFFFF",
+          }
+        ]
+      }
+    }
+  );
+})();
+
+(async function () {
+  const data = [
+    { year: 2010, count: 10 },
+    { year: 2011, count: 20 },
+    { year: 2012, count: 15 },
+    { year: 2013, count: 25 },
+    { year: 2014, count: 22 },
+    { year: 2015, count: 30 },
+    { year: 2016, count: 28 },
+  ];
+
+  new Chart(
+    document.getElementById('chart2'),
+    {
+      type: 'polarArea',
+      data: {
+        labels: data.map(row => row.year),
+        datasets: [
+          {
+            label: 'Acquisitions by year',
+            data: data.map(row => row.count),
+            backgroundColor: ["#5056BF", "#65A6FA", "#6D74F2", "#9B57CC", "#00CADC"],
+            borderColor: "#FFFFFF",
+          }
+        ]
+      }
+    }
+  );
+})();
+
+(async function () {
+  const data = {
+    labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
+    datasets: [{
+      label: 'Looping tension',
+      data: [65, 59, 80, 81, 26, 55, 40],
+      fill: false,
+      backgroundColor: ["#5056BF", "#65A6FA", "#6D74F2", "#9B57CC", "#00CADC"],
+      borderColor: "#65A6FA",
+    }]
+  };
+
+  new Chart(
+    document.getElementById('chart3'),
+    {
+      type: 'line',
+      data: data,
+      options: {
+        animations: {
+          tension: {
+            duration: 1000,
+            easing: 'linear',
+            from: 1,
+            to: 0,
+            loop: true
+          }
+        },
+        scales: {
+          y: { // defining min and max so hiding the dataset does not change scale range
+            min: 0,
+            max: 100
+          }
+        }
+      }
+    }
+  );
+})();
+
+// chart barras e linhas
+(async function () {
+  const data = {
+    labels: [
+      'January',
+      'February',
+      'March',
+      'April',
+      'Mai',
+      'jun',
+      'july'
+    ],
+    datasets: [{
+      type: 'bar',
+      label: 'Bar Dataset',
+      data: [10, 30, 20, 50, 45, 55, 65],
+      borderColor: 'rgb(255, 99, 132)',
+      backgroundColor: 'rgba(255, 99, 132, 0.2)'
+    }, {
+      type: 'line',
+      label: 'Line Dataset',
+      data: [15, 35, 25, 55, 50, 65, 75],
+      fill: false,
+      backgroundColor: ["#5056BF", "#65A6FA", "#6D74F2", "#9B57CC", "#00CADC"],
+      borderColor: "#65A6FA",
+    }]
+  };
+
+  new Chart(
+    document.getElementById('chart4'),
+    {
+      type: 'scatter',
+      data: data,
+      options: {
+        scales: {
+          y: {
+            beginAtZero: true
+          }
+        }
+      }
+    }
+  );
+})();
+
+// chart pizza
+(async function () {
+  const data = [
+    { year: 2010, count: 10 },
+    { year: 2011, count: 20 },
+    { year: 2012, count: 15 },
+    { year: 2013, count: 25 },
+    { year: 2014, count: 22 },
+    { year: 2015, count: 30 },
+    { year: 2016, count: 28 },
+  ];
+
+  new Chart(
+    document.getElementById('chart5'),
+    {
+      type: 'pie',
+      data: {
+        labels: data.map(row => row.year),
+        datasets: [
+          {
+            label: 'Acquisitions by year',
+            data: data.map(row => row.count),
+            backgroundColor: ["#5056BF", "#65A6FA", "#6D74F2", "#9B57CC", "#00CADC"],
+            borderColor: "#FFFFFF",
+          }
+        ]
+      }
+    }
+  );
+})();
+
+(async function () {
+  const data = [
+    { year: 2010, count: 10 },
+    { year: 2011, count: 20 },
+    { year: 2012, count: 15 },
+    { year: 2013, count: 25 },
+    { year: 2014, count: 22 },
+    { year: 2015, count: 30 },
+    { year: 2016, count: 28 },
+  ];
+
+  new Chart(
+    document.getElementById('chart6'),
+    {
+      type: 'radar',
+      data: {
+        labels: data.map(row => row.year),
+        datasets: [
+          {
+            label: 'Acquisitions by year',
+            data: data.map(row => row.count),
+          }
+        ]
+      }
+    }
+  );
+})();
+
+// chart barras
+(async function () {
+  const data = [
+    { year: 2010, count: 10 },
+    { year: 2011, count: 20 },
+    { year: 2012, count: 15 },
+    { year: 2013, count: 25 },
+    { year: 2014, count: 22 },
+    { year: 2015, count: 30 },
+    { year: 2016, count: 28 },
+  ];
+
+  new Chart(
+    document.getElementById('chart7'),
     {
       type: 'bar',
       data: {
@@ -43,14 +246,20 @@ import Chart from 'chart.js/auto'
         datasets: [
           {
             label: 'Acquisitions by year',
-            data: data.map(row => row.count)
+            data: data.map(row => row.count),
+            backgroundColor: ["#6C57F1", "#6C57F1", "#6C57F1", "#6C57F1", "#6C57F1"],
+            borderColor: "#FFFFFF",
           }
         ]
       }
     }
   );
 })();
- 
+
+
+
+
+// funções pra adicionar os dados csv 'em densenvolvimento ainda'
 
 var DATA_CSV = {};
 
@@ -88,14 +297,14 @@ function criarGrafico(tipo, data, canvasId) {
 
 // Função para ler e adicionar o selecionar series 
 const addSelectOptions = (options) => {
-    options.forEach(option => {
-      const htmlOption = document.createElement('option');
-      htmlOption.value = option;
-      htmlOption.innerHTML = option;
-      document.getElementById('series').appendChild(htmlOption);
-    });
-  }
-  
+  options.forEach(option => {
+    const htmlOption = document.createElement('option');
+    htmlOption.value = option;
+    htmlOption.innerHTML = option;
+    document.getElementById('series').appendChild(htmlOption);
+  });
+}
+
 
 // Função para analisar o arquivo CSV
 function analisarCSV(file) {
@@ -124,8 +333,9 @@ document.getElementById('csvFile').addEventListener('change', function (e) {
   if (file) analisarCSV(file);
 });
 
-// Evento para atualizar o tipo de gráfico
+/* Evento para atualizar o tipo de gráfico
 document.getElementById('chartType').addEventListener('change', function (event) {
   const selectedValue = event.target.value;
   criarGrafico(selectedValue, DATA_CSV, 'chart1');
 });
+*/
