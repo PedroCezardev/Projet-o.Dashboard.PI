@@ -54,6 +54,7 @@ darkMode.addEventListener('click', () => {
   );
 })();
 
+// chart radar
 (async function () {
   const data = [
     { year: 2010, count: 10 },
@@ -68,15 +69,13 @@ darkMode.addEventListener('click', () => {
   new Chart(
     document.getElementById('chart2'),
     {
-      type: 'polarArea',
+      type: 'radar',
       data: {
         labels: data.map(row => row.year),
         datasets: [
           {
             label: 'Acquisitions by year',
             data: data.map(row => row.count),
-            backgroundColor: ["#5056BF", "#65A6FA", "#6D74F2", "#9B57CC", "#00CADC"],
-            borderColor: "#FFFFFF",
           }
         ]
       }
@@ -84,6 +83,7 @@ darkMode.addEventListener('click', () => {
   );
 })();
 
+// grafico de linhas
 (async function () {
   const data = {
     labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
@@ -197,6 +197,7 @@ darkMode.addEventListener('click', () => {
   );
 })();
 
+// chart area polar
 (async function () {
   const data = [
     { year: 2010, count: 10 },
@@ -211,13 +212,15 @@ darkMode.addEventListener('click', () => {
   new Chart(
     document.getElementById('chart6'),
     {
-      type: 'radar',
+      type: 'polarArea',
       data: {
         labels: data.map(row => row.year),
         datasets: [
           {
             label: 'Acquisitions by year',
             data: data.map(row => row.count),
+            backgroundColor: ["#5056BF", "#65A6FA", "#6D74F2", "#9B57CC", "#00CADC"],
+            borderColor: "#FFFFFF",
           }
         ]
       }
