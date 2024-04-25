@@ -6,9 +6,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" rel="stylesheet">
-    <link rel="stylesheet" href="/Pages/reportar/main.css">
+    <link rel="stylesheet" href="/Pages/export/Export.css">
     <link rel="stylesheet" href="/css/responsive.css">
-    <title>Reportar</title>
+    <title>Exportar Gráficos</title>
 </head>
 
 <body>
@@ -75,7 +75,7 @@
                     </span>
                     <h3>Dashboard</h3>
                 </a>
-                <a href="/Pages/export/Export.html">
+                <a href="/Pages/export/Export.html" class="active">
                     <span class="material-icons-sharp">
                         download
                     </span>
@@ -93,7 +93,7 @@
                     </span>
                     <h3>Dashchat</h3>
                 </a>
-                <a href="/Pages/reportar/reportar.html" class="active">
+                <a href="/Pages/reportar/reportar.html">
                     <span class="material-icons-sharp">
                         report_gmailerrorred
                     </span>
@@ -139,67 +139,50 @@
             <!-- Fim do sidebar -->
         </aside>
 
-        <div class="">
+        <div class="container">
             <section class="group">
-
-                <div class="contato__content">
-                    <div class="top">
-                        <div class="title">
-                            <span class="material-icons-sharp">
-                                report
-                            </span>
-                            <div class="report">
-                                <h1 style="font-size: 2.3rem;">Reportar</h1>
-                            </div>
+                <div class="top">
+                    <div class="title">
+                        <span class="material-icons-sharp">
+                            download
+                        </span>
+                        <div class="export">
+                            <h1 style="font-size: 2.3rem;">Exportar Gráficos</h1>
                         </div>
-                        <div class="text">
-                            <p style="color: aliceblue;">Nesta página é possível exportar os gráficos que são exibidos
-                                no
-                                Dashboard.
-                            <p>
-                        </div>
-                        <h2>Entre em contato: </h2>
-
-                        <p class="contato__description">Entre em contato com a plataforma pelo telefone:
-                            <a href="tel:+558199112895"> 81 98596-4761</a> ou email:
-                            <a href="mailto:jhonesbonifacio_18@outlook.com">pcdasilvabeserra@gmail.com</a>
-                        </p>
                     </div>
-                    <form class="contact">
-                        <div class="input">
-                            <input type="text" name="name" placeholder="Seu nome *" class="contato__input"
-                                id="contato-name" />
-                        </div>
-
-                        <div class="input">
-                            <input type="email" name="email" placeholder="Seu email *" class="contato__input"
-                                id="contato-email" />
-                        </div>
-
-                        <div class="input">
-                            <input type="text" name="subject" placeholder="Assunto" class="contato__input"
-                                id="contato-subject" />
-                        </div>
-
-                        <div class="description">
-                            <textarea name="message" id="contato-message" class="contato__input textarea"
-                                placeholder="Sua mensagem"></textarea>
-                        </div>
-
-                        <div class="button">
-                            <button>Enviar</button>
-                        </div>
-                        
-                        <p class="mensagem__erro" id="mensagem-erro"></p>
-                    </form>
+                    <div class="text">
+                        <p style="color: aliceblue;">Nesta página é possível exportar os gráficos que são exibidos no
+                            Dashboard.
+                        <p>
+                    </div>
+                    <p id="status"></p>
                 </div>
-
+                <div class="content">
+                    <div class="select">
+                        <h2>Selecione abaixo os Gráficos você deseja Exportar: </h2>
+                        <label><input type="checkbox" name="webmaster" value="sim"> Gráfico 1</label>
+                        <label><input type="checkbox" name="webmaster" value="sim"> Gráfico 2</label>
+                        <label><input type="checkbox" name="webmaster" value="sim"> Gráfico 3</label>
+                        <label><input type="checkbox" name="webmaster" value="sim"> Gráfico 4</label>
+                        <label><input type="checkbox" name="webmaster" value="sim"> Gráfico 5</label>
+                        <label><input type="checkbox" name="webmaster" value="sim"> Gráfico 6</label>
+                        <label><input type="checkbox" name="webmaster" value="sim"> Gráfico 7</label>
+                    </div>
+                    <div class="button">
+                        <button>
+                            <span class="material-icons-sharp">
+                                download
+                            </span>
+                            Baixar
+                        </button>
+                    </div>
+                </div>
             </section>
         </div>
 
     </div>
 
-    <script src="/Pages/reportar/script.js"></script>
+    <script src="/Pages/export/script.js"></script>
     <script src="/js/script.js"></script>
 </body>
 
