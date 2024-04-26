@@ -152,45 +152,55 @@
                                 <h1 style="font-size: 2.3rem;">Reportar</h1>
                             </div>
                         </div>
-                        <div class="text">
-                            <p style="color: aliceblue;">Nesta página é possível exportar os gráficos que são exibidos
-                                no
-                                Dashboard.
-                            <p>
-                        </div>
-                        <h2>Entre em contato: </h2>
+                        <div class="descricao">
+                            <div class="text">
+                                <p style="color: aliceblue;">Nesta página é possível reportar erros ou problemas que
+                                    você encontrou
+                                    na aplicação, sugestões para melhorar a plataforma, você também pode entrar em
+                                    contato com o desenvolvedor,
+                                    caso seja assuntos particulares.
+                                <p>
+                            </div>
+                            <div class="contato">
+                                <h2>Entre em contato: </h2>
 
-                        <p class="contato__description">Entre em contato com a plataforma pelo telefone:
-                            <a href="tel:+558199112895"> 81 98596-4761</a> ou email:
-                            <a href="mailto:jhonesbonifacio_18@outlook.com">pcdasilvabeserra@gmail.com</a>
-                        </p>
+                                <p class="contato__description">Entre em contato com a plataforma pelo telefone:
+                                    <a href="tel:+558199112895"> 81 98596-4761</a> ou email:
+                                    <a href="mailto:jhonesbonifacio_18@outlook.com">pcdasilvabeserra@gmail.com</a>
+                                </p>
+                            </div>
+                        </div>
                     </div>
                     <form class="contact">
-                        <div class="input">
-                            <input type="text" name="name" placeholder="Seu nome *" class="contato__input"
-                                id="contato-name" />
-                        </div>
+                        <div class="section">
+                            <div class="input">
+                                <input type="text" name="name" placeholder="Seu nome *" class="contato__input"
+                                    id="sendername" />
+                            </div>
 
-                        <div class="input">
-                            <input type="email" name="email" placeholder="Seu email *" class="contato__input"
-                                id="contato-email" />
-                        </div>
+                            <div class="input">
+                                <input type="email" name="email" placeholder="Seu email *" class="contato__input"
+                                    id="to" />
+                            </div>
 
-                        <div class="input">
-                            <input type="text" name="subject" placeholder="Assunto" class="contato__input"
-                                id="contato-subject" />
-                        </div>
+                            <div class="input">
+                                <input type="text" name="subject" placeholder="Assunto" class="contato__input"
+                                    id="subject" />
+                            </div>
 
-                        <div class="description">
-                            <textarea name="message" id="contato-message" class="contato__input textarea"
-                                placeholder="Sua mensagem"></textarea>
-                        </div>
+                            <div class="description">
+                                <textarea name="message" id="message" class="contato__input textarea"
+                                    placeholder="Sua mensagem"></textarea>
+                            </div>
 
-                        <div class="button">
-                            <button>Enviar</button>
+                            <div class="button">
+                                <button id="emailButton">
+                                    ENVIAR  
+                                </button>
+                            </div>
+
+                            <p class="mensagem__erro" id="mensagem-erro"></p>
                         </div>
-                        
-                        <p class="mensagem__erro" id="mensagem-erro"></p>
                     </form>
                 </div>
 
@@ -201,6 +211,9 @@
 
     <script src="/Pages/reportar/script.js"></script>
     <script src="/js/script.js"></script>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
 </body>
 
 </html>
